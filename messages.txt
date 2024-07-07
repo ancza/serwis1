@@ -1,0 +1,5 @@
+Imię: a, Wiadomość: a
+Imię: aaa, Wiadomość: ppp
+Imię: aa, Wiadomość: aa
+Imię: aa, Wiadomość: aa
+Imię: aa, Wiadomość: aa

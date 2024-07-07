@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Formularz użytkownika do pisania opinii</title>
+</head>
+<body>
+
+            <form action="wyslijopinie.php" method="POST">
+              <label for="username">Twoje imię:</label>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                required
+              /><br /><br />
+  
+              <label for="ocena">Twoja ocena (skala od 1 - najniższa do 5 - najwyższa):</label>
+              <input
+                type="number"
+                id="ocena"
+                name="ocena"
+                min="1"
+                max="5"
+                required
+              /><br /><br />
+  
+              <label for="opinia">Twoja opinia:</label><br />
+              <textarea id="opinia" name="opinia" rows="4" required></textarea
+              ><br /><br />
+  
+              <button type="submit">Wyślij Opinię</button>
+            </form>
+          </div>
+        </div>
+      </section>
+  
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz użytkownika do pisania opinii</title>
+</head>
+<body>
+
+<!-- Formularz opinii -->
+<form>
+  <label for="imie">Twoje imię:</label><br>
+  <input type="text" id="imie" name="imie" required><br><br>
+  
+  <label for="ocena">Twoja ocena (w skali 1-5):</label><br>
+  <input type="number" id="ocena" name="ocena" min="1" max="5" required><br><br>
+  
+  <label for="opinia">Twoja opinia:</label><br>
+  <textarea id="opinia" name="opinia" rows="4" cols="50" required></textarea><br><br>
+  
+  <button type="button" onclick="submitReview()">Wyślij opinię</button>
+    <br/><br/>
+      <a href="konto.php">Wróć do swojego konta</a>
+    <br/><br/>
+</form>
+
+<script>
+function submitReview() {
+  
+  // Pobierz dane z formularza
+  var imie = document.getElementById('imie').value;
+  var ocena = document.getElementById('ocena').value;
+  var opinia = document.getElementById('opinia').value;
+  
+  // Utwórz zapytanie AJAX do serwera z niebezpiecznymi danymi
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', 'wyslijopinie1.php', true);
+  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  
+  // Uwaga: to jest przykładowa podatność na atak XSS
+  // Atakujący może wstrzyknąć szkodliwy kod JavaScript w polu komentarza
+  xhr.send('imie=' + imie + '&ocena=' + ocena + '&opinia=' + opinia);
+  
+  // Po wysłaniu opinii, wyświetl komunikat
+  alert('Twoja opinia została przesłana. Dziękujemy!');
+
+  // Czyszczenie pól formularza
+    document.getElementById('imie').value = '';
+    document.getElementById('ocena').value = '';
+    document.getElementById('opinia').value = '';
+};
+</script>
+
+  
+
+</body>
+</html>

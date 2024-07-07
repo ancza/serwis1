@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Formularz użytkownika do pisania wiadomości</title>
+</head>
+<body>
+
+<form action="saveMessage.php" method="POST">
+    <label for="name">Imię:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="message">Wiadomość:</label>
+    <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+    <button type="submit">Wyślij Wiadomość</button>
+</form>
+
+</body>
+</html>

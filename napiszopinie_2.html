@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Formularz użytkownika do pisania opinii</title>
+</head>
+<body>
+
+            <form action="wyslijopinie.php" method="POST">
+              <label for="imie">Twoje imię:</label><br>
+              <input
+                type="text"
+                id="imie"
+                name="imie"
+                required
+              /><br /><br />
+  
+              <label for="ocena">Twoja ocena (skala od 1 - najniższa do 5 - najwyższa):</label><br>
+              <input
+                type="number"
+                id="ocena"
+                name="ocena"
+                min="1"
+                max="5"
+                required
+              /><br /><br />
+  
+              <label for="opinia">Twoja opinia:</label><br />
+              <textarea id="opinia" name="opinia" rows="4" required></textarea
+              ><br /><br />
+  
+              <button type="submit" onclick="submitReview()">Wyślij Opinię</button>
+                <br/><br/>
+                    <a href="konto.php">Wróć do swojego konta</a>
+                <br/><br/>
+            </form>
+            <script>
+                function submitReview() {
+                    // Pobierz dane z formularza
+                    var imie = document.getElementById('imie').value;
+                    var ocena = document.getElementById('ocena').value;
+                    var opinia = document.getElementById('opinia').value;
+                
+                    // Wyślij dane do serwera AJAX-em
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('POST', 'wyslijopinie.php', true);
+                    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    xhr.send('imie=' + encodeURIComponent(imie) + '&ocena=' + encodeURIComponent(ocena) + '&opinia=' + encodeURIComponent(opinia));
+                }
+                </script>
+          </div>
+        </div>
+      </section>
+  
+
+</body>
+</html>

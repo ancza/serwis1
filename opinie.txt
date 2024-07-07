@@ -1,0 +1,8 @@
+Imię: aaaa, Ocena: 4, Opinia: csv
+Imię: aaaa, Ocena: 4, Opinia: <script>alert('Atak XSS!');</script>
+
+Imię: aaa, Ocena: 1, Opinia: vr
+Imię: adsw, Ocena: 1, Opinia: <script>alert('Atak XSS!');</script>
+
+Imię: aaa, Ocena: 1, Opinia: <script>alert('Atak XSS');</script>
+

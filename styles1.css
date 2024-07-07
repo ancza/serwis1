@@ -1,0 +1,84 @@
+body {
+  align-items: center;
+  background: var(--color-light);
+  background: linear-gradient(
+    to top right,
+    var(--color-dark),
+    var(--color-light)
+  );
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  height: 100vh;
+  justify-content: center;
+  width: 100vh;
+
+
+}
+button {
+  color: #fff;
+  background-color: #ffc800;
+  border-color: #ffc800;
+  padding: 1.25rem 2.5rem;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-transform: uppercase !important;
+
+  display: inline-block;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+}
+
+.loginPanel {
+  box-shadow: 0px 0px 10px #afb1af;
+  padding-bottom: 30px;
+  margin-bottom: 10px;
+  border-radius: 0.25rem;
+
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 600;
+    line-height: 1.2;
+}
+.loginPanel_header {
+  padding: 0.5em 1em 0.5em;
+  color: #fff !important;
+  background: #5b5e59;
+
+  font-size: 2.5rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  border-radius: 0.25rem;
+  text-transform: uppercase !important;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 600;
+    line-height: 1.2;
+}
+.loginPanel_content {
+  border: 0;
+  background: 0;
+  padding: 0.5em 1em;
+  font-size: 20px;
+  color: #222222;
+  margin: 0;
+  margin-bottom: 5px;
+}
+.form_input-container{
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+
+
